@@ -52,7 +52,7 @@ const generateCard = (member) => {
   // e cancellando la carta da HTML lasciando id teams per l'innerHTML successivo 
   const memberCard = `
 
-   <div class="card col-12 col-md-4 bg-dark mb-3" >
+   <div class="card col-12 col-md-3 bg-dark mb-3 mx-3" >
         <div class="row">
           <div class="col-4 col-md-4">
             <img src="./assets/${img}" class="img-fluid rounded-start" alt="...">
