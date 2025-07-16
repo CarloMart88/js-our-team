@@ -41,6 +41,12 @@ const teamMembers = [
 
 // (trovate l’array del team all’interno della cartella in allegato)
 
+const teams = document.getElementById('teams')
+
+//creo l'array vuoto dove pusherò le card 
+
+const teamInformations = [] ;
+
 // devo creare una funzione per crere le carte con ogni singolo oggetto per poi tramite il ciclo for assegnare ogni indice dell'array
 const generateCard = (member) => {
 
@@ -70,8 +76,12 @@ const generateCard = (member) => {
 
 }
 
-{}
+for(let i = 0 ;i<teamMembers.length; i++){
 
+  let card = generateCard(teamMembers[i])
+  teams.innerHTML += card;
+
+}
 
 
 
