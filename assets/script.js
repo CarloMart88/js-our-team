@@ -37,14 +37,47 @@ const teamMembers = [
   }
 ];
 
-// Ciao ragazzi,
-// esercizio di oggi: Our Team
-
-// repo: js-our-team
-
 // Dato un array di oggetti rappresentante un team di un’azienda, creare una pagina dedicata in cui mostrare una card per ciascun componente.
 
 // (trovate l’array del team all’interno della cartella in allegato)
+
+// devo creare una funzione per crere le carte con ogni singolo oggetto per poi tramite il ciclo for assegnare ogni indice dell'array
+const generateCard = (member) => {
+
+  const { name, role, email, img } = teamMembers ;// destrutturo così da poter prendere i valori nelle chiavi 
+
+  // a questo punto non farò altro che copiare il mio Html creato nella variabile memberCard inserendovi le chiavi  
+  // e cancellando la carta da HTML lasciando id teams per l'innerHTML successivo 
+  const memberCard = `
+
+   <div class="card mb-3 col-12 col-md-4" >
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./assets/img/${img}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body bg-dark">
+              <h5 class="card-title text-white">${name}</h5>
+              <p class="card-text text-white">${role}</p>
+              <p class="card-text text-white">${email}</p>
+            </div>
+          </div>  
+        </div>
+      </div>
+  `
+
+  return memberCard ;
+
+}
+
+{}
+
+
+
+
+
+
+
 
 // Bonus
 
