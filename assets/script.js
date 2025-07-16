@@ -58,11 +58,11 @@ const generateCard = (member) => {
             <img src="./assets/${img}" class="img-fluid rounded-start" alt="...">
           </div>
           <div class="col-8 col-md-8">
-            <div class="card-body">
-              <h5 class="card-title text-white">${name}</h5>
-              <p class="card-text text-white">${role}</p>
-              <p class="card-text text-white">
-              <a href="mailto:${email}" class="text-white">${email}</a>
+            <div class="card-body text-white">
+              <h5 class="card-title">${name}</h5>
+              <p class="card-text">${role}</p>
+              <p class="card-text">
+              <a href="#">${email}</a>
               </p>
             </div>
           </div>  
