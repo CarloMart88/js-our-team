@@ -43,29 +43,27 @@ const teamMembers = [
 
 const teams = document.getElementById('teams')
 
-//creo l'array vuoto dove pusherò le card 
-
-const teamInformations = [] ;
-
 // devo creare una funzione per crere le carte con ogni singolo oggetto per poi tramite il ciclo for assegnare ogni indice dell'array
 const generateCard = (member) => {
 
-  const { name, role, email, img } = teamMembers ;// destrutturo così da poter prendere i valori nelle chiavi 
+  const { name, role, email, img } = member ;// destrutturo così da poter prendere i valori nelle chiavi 
 
   // a questo punto non farò altro che copiare il mio Html creato nella variabile memberCard inserendovi le chiavi  
   // e cancellando la carta da HTML lasciando id teams per l'innerHTML successivo 
   const memberCard = `
 
-   <div class="card mb-3 col-12 col-md-4" >
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="./assets/img/${img}" class="img-fluid rounded-start" alt="...">
+   <div class="card col-12 col-md-4 bg-dark mb-3" >
+        <div class="row">
+          <div class="col-4 col-md-4">
+            <img src="./assets/${img}" class="img-fluid rounded-start" alt="...">
           </div>
-          <div class="col-md-8">
-            <div class="card-body bg-dark">
+          <div class="col-8 col-md-8">
+            <div class="card-body">
               <h5 class="card-title text-white">${name}</h5>
               <p class="card-text text-white">${role}</p>
-              <p class="card-text text-white">${email}</p>
+              <p class="card-text text-white">
+              <a href="mailto:${email}" class="text-white">${email}</a>
+              </p>
             </div>
           </div>  
         </div>
@@ -76,7 +74,7 @@ const generateCard = (member) => {
 
 }
 
-for(let i = 0 ;i<teamMembers.length; i++){
+for(let i=0 ; i<teamMembers.length; i++){
 
   let card = generateCard(teamMembers[i])
   teams.innerHTML += card;
