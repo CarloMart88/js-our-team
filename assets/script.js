@@ -55,7 +55,7 @@ const generateCard = (member) => {
    <div class="card col-12 col-md-3 bg-dark mb-3 mx-2" >
         <div class="row">
           <div class="col-4 col-md-4">
-            <img src="./assets/${img}" class="img-fluid rounded-start cover" alt="...">
+            <img src="./assets/${img}" class="img-fluid img-adapt cover" alt="...">
           </div>
           <div class="col-8 col-md-8">
             <div class="card-body text-white">
